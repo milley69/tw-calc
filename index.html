@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/milley69/ondeck/master/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link href="./dist/tw-main.css" rel="stylesheet" />
+    <!-- <link href="./dist/main.css" rel="stylesheet" /> -->
+  </head>
+  <body
+    class="h-screen w-screen overflow-y-hidden bg-uwu-100 flex flex-col items-center justify-center mx-auto"
+  >
+    <div class="card w-[350px] h-[710px]">
+      <!-- <div class="p-3 w-full h-4/5 bg-uwu-200 rounded-2xl"> -->
+      <div class="p-3 w-full h-full bg-uwu-200 rounded-2xl">
+        <!-- <div class="p-3 w-[296px] h-[660px] bg-uwu-200 rounded-2xl"> -->
+        <input
+          type="text"
+          id="what"
+          class="block mt-1 h-[10%] text-uwu-100 text-2xl text-right w-full px-3 bg-transparent border-b-[1px] border-uwu-100"
+          value="0"
+          disabled
+        />
+        <input
+          type="text"
+          id="who"
+          disabled
+          class="block mt-2 h-[10%] text-uwu-100 text-2xl text-right w-full px-3 bg-transparent border-b-[1px] border-uwu-100"
+          value=""
+        />
+
+        <div id="key2" class="grid grid-cols-4 gap-2 h-[75%] mt-[4%]">
+          <button
+            class="bg-uwu-500 hover:bg-uwu-400 disabled:bg-uwu-600 rounded-tl-xl"
+            disabled
+            data-key="%"
+          >
+            &percnt;
+          </button>
+          <button class="bg-uwu-500 hover:bg-uwu-400" data-key="(">(</button>
+          <button class="bg-uwu-500 hover:bg-uwu-400" data-key=")">)</button>
+          <button
+            class="bg-uwu-500 hover:bg-uwu-400 rounded-tr-xl"
+            data-key="pow"
+          >
+            x<span class="text-xs align-text-top">2</span>
+          </button>
+          <button class="bg-uwu-500 hover:bg-uwu-400" data-key="del-all">
+            CE</button
+          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="del">C</button
+          ><button
+            class="bg-uwu-500 hover:bg-uwu-400 rotate-180"
+            data-key="del-last"
+          >
+            &#10153;</button
+          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="obelus">
+            &#247;</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            7</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            8</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            9</button
+          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="multiply">
+            &#215;</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            4</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            5</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            6</button
+          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="minus">
+            &#8722;</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            1</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            2</button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            3</button
+          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="plus">
+            &#43;</button
+          ><button
+            class="bg-uwu-500 hover:bg-uwu-400 disabled:bg-uwu-600 rounded-bl-xl"
+            disabled
+            data-key=""
+          ></button
+          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
+            0</button
+          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key=".">.</button
+          ><button
+            class="bg-uwu-500 hover:bg-uwu-400 rounded-br-xl"
+            data-key="equal"
+          >
+            &#61;
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>

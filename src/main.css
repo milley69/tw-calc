@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button.bg-uwu-300,
+button.bg-uwu-500 {
+  @apply text-uwu-100 transition-all text-lg drop-shadow-2xl;
+}
+
+/* button.bg-uwu-300 {
+  @apply text-lg;
+} */
