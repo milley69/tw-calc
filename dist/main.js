@@ -55,7 +55,7 @@ key.addEventListener('click', (e) => {
     value = ''
   }
 
-  if (click == 'number' || click == '(' || click == ')') {
+  if (click == 'number' || click == '.' || click == '(' || click == ')') {
     value += e.target.innerText
     what.value = fuck.join('') + value
     console.log(value)
