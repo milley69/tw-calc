@@ -10,95 +10,109 @@
       href="https://raw.githubusercontent.com/milley69/ondeck/master/img/favicon.ico"
       type="image/x-icon"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link href="./dist/tw-main.css" rel="stylesheet" />
   </head>
   <body
-    class="h-screen w-screen overflow-y-hidden bg-uwu-100 flex flex-col items-center justify-center mx-auto"
+    class="h-screen w-screen overflow-y-hidden flex flex-col items-center justify-center mx-auto"
   >
     <div class="card w-[350px] h-[710px]">
-      <div class="p-3 w-full h-full bg-uwu-200 rounded-2xl">
-        <input
+      <div class="card-calc p-3 w-full h-full rounded-2xl">
+        <!-- <input
           type="text"
           id="what"
-          class="block mt-1 h-[10%] text-uwu-100 text-2xl text-right w-full px-3 bg-transparent border-b-[1px] border-uwu-100"
+          class="block mt-1 h-[10%] text-leaf-100 text-2xl text-right w-full px-3 bg-transparent border-b-[1px] border-leaf-100"
           value="0"
           disabled
-        />
+        /> -->
+        <textarea
+          id="what"
+          class="block mt-1 h-[10%] text-2xl text-right w-full px-3 bg-transparent border-b-[1px] resize-none"
+          value="0"
+          disabled
+        ></textarea>
         <input
           type="text"
           id="who"
           disabled
-          class="block mt-2 h-[10%] text-uwu-100 text-2xl text-right w-full px-3 bg-transparent border-b-[1px] border-uwu-100"
+          class="block mt-2 h-[10%] text-2xl text-right w-full px-3 bg-transparent border-b-[1px]"
           value=""
         />
 
         <div id="key2" class="grid grid-cols-4 gap-2 h-[75%] mt-[4%]">
-          <button
-            class="bg-uwu-500 hover:bg-uwu-400 disabled:bg-uwu-600 rounded-tl-xl"
-            disabled
-            data-key="%"
-          >
-            &percnt;
-          </button>
-          <button class="bg-uwu-500 hover:bg-uwu-400" data-key="(">(</button>
-          <button class="bg-uwu-500 hover:bg-uwu-400" data-key=")">)</button>
-          <button
-            class="bg-uwu-500 hover:bg-uwu-400 rounded-tr-xl"
-            data-key="pow"
-          >
+          <button class="rounded-tl-xl" disabled data-key="%">&percnt;</button>
+          <button class="" data-key="(">(</button>
+          <button class="" data-key=")">)</button>
+          <button class="rounded-tr-xl" data-key="pow">
             x<span class="text-xs align-text-top">2</span>
           </button>
-          <button class="bg-uwu-500 hover:bg-uwu-400" data-key="del-all">
-            CE</button
-          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="del">C</button
-          ><button
-            class="bg-uwu-500 hover:bg-uwu-400 rotate-180"
-            data-key="del-last"
-          >
-            &#10153;</button
-          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="obelus">
-            &#247;</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            7</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            8</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            9</button
-          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="multiply">
-            &#215;</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            4</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            5</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            6</button
-          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="minus">
-            &#8722;</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            1</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            2</button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            3</button
-          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key="plus">
-            &#43;</button
-          ><button
-            class="bg-uwu-500 hover:bg-uwu-400 disabled:bg-uwu-600 rounded-bl-xl"
-            disabled
-            data-key=""
-          ></button
-          ><button class="bg-uwu-300 hover:bg-uwu-400" data-key="number">
-            0</button
-          ><button class="bg-uwu-500 hover:bg-uwu-400" data-key=".">.</button
-          ><button
-            class="bg-uwu-500 hover:bg-uwu-400 rounded-br-xl"
-            data-key="equal"
-          >
-            &#61;
-          </button>
+          <button class="" data-key="del-all">CE</button
+          ><button class="" data-key="del">C</button
+          ><button class="" data-key="del-last">
+            <i class="bx bxs-tag-x bx-sm"></i></button
+          ><button class="" data-key="obelus">&#247;</button
+          ><button class="" data-key="number">7</button
+          ><button class="" data-key="number">8</button
+          ><button class="" data-key="number">9</button
+          ><button class="" data-key="multiply">&#215;</button
+          ><button class="" data-key="number">4</button
+          ><button class="" data-key="number">5</button
+          ><button class="" data-key="number">6</button
+          ><button class="" data-key="minus">&#8722;</button
+          ><button class="" data-key="number">1</button
+          ><button class="" data-key="number">2</button
+          ><button class="" data-key="number">3</button
+          ><button class="" data-key="plus">&#43;</button>
+          <div class="favorite_settings relative">
+            <button
+              class="w-full h-full relative rounded-bl-xl z-50 ring-0 outline-none favorite_close"
+              data-key="favorite"
+            >
+              <i class="bx bx-heart"></i>
+            </button>
+            <button
+              class="absolute left-0 w-full h-[93%] z-10 -top-[105%] rounded-none"
+              data-key="wine"
+            >
+              <i class="bx bx-wine bx-md"></i>
+            </button>
+            <button
+              class="absolute left-0 w-full h-[93%] z-10 -top-[209%] rounded-none"
+              data-key="leaf"
+            >
+              <i class="bx bx-leaf bx-md"></i>
+            </button>
+            <button
+              class="absolute left-0 w-full h-[93%] z-10 -top-[313%] rounded-none"
+              data-key="lavender"
+            >
+              <i class="bx bx-popsicle bx-md"></i>
+            </button>
+            <button
+              class="absolute block left-0 w-full h-[93%] z-10 -top-[417%] rounded-none"
+            >
+              <a
+                href="https://github.com/milley69"
+                rel="noopener"
+                target="_blank"
+                ><i class="bx bxl-github bx-md"></i
+              ></a>
+            </button>
+          </div>
+          <button class="" data-key="number">0</button
+          ><button class="" data-key=".">.</button
+          ><button class="rounded-br-xl" data-key="equal">&#61;</button>
         </div>
       </div>
     </div>
     <script src="./dist/main.js"></script>
+    <script src="./dist/main2.js"></script>
   </body>
 </html>

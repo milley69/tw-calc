@@ -2,11 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-button.bg-uwu-300,
-button.bg-uwu-500 {
-  @apply text-uwu-100 transition-all text-lg drop-shadow-2xl;
+/* button[data-key='number'].leaf-number {
+  @apply bg-leaf-300 hover:bg-leaf-400;
+}
+button.leaf {
+  @apply bg-leaf-500 hover:bg-leaf-400;
+} */
+body.leaf {
+  @apply bg-leaf-100 text-leaf-100;
+}
+body.leaf .card .card-calc {
+  @apply bg-leaf-200;
+}
+body.leaf textarea,
+body.leaf input {
+  @apply border-leaf-100;
+}
+body.leaf #key2 > button,
+body.leaf #key2 > .favorite_settings button {
+  @apply bg-leaf-500 hover:bg-leaf-400 disabled:bg-leaf-600 transition-all text-lg drop-shadow-2xl text-leaf-100;
+}
+body.leaf #key2 > button[data-key='number'] {
+  @apply bg-leaf-300 hover:bg-leaf-400;
 }
 
-/* button.bg-uwu-300 {
-  @apply text-lg;
-} */
+body.lavender {
+  @apply bg-lavender-100 text-lavender-600;
+}
+body.lavender .card .card-calc {
+  @apply bg-lavender-200;
+}
+body.lavender textarea,
+body.lavender input {
+  @apply border-lavender-100;
+}
+body.lavender #key2 > button,
+body.lavender #key2 > .favorite_settings button {
+  @apply bg-lavender-400 hover:bg-lavender-500 disabled:bg-lavender-600 disabled:text-lavender-100 transition-all text-lg drop-shadow-2xl;
+}
+body.lavender #key2 > button[data-key='number'] {
+  @apply bg-lavender-300 hover:bg-lavender-500;
+}
+
+body.wine {
+  @apply bg-wine-100 text-wine-600;
+}
+body.wine .card .card-calc {
+  @apply bg-wine-200;
+}
+body.wine textarea,
+body.wine input {
+  @apply border-wine-100 text-wine-400;
+}
+body.wine #key2 > button,
+body.wine #key2 > .favorite_settings button {
+  @apply bg-wine-400 hover:bg-wine-500 disabled:bg-wine-600 disabled:text-wine-100 transition-all text-lg drop-shadow-2xl;
+}
+body.wine #key2 > button[data-key='number'] {
+  @apply bg-wine-300 hover:bg-wine-500;
+}
+
+.opacity-hide > * {
+  @apply opacity-50 pointer-events-none;
+}
+.favorite_settings {
+  @apply text-2xl opacity-100 pointer-events-auto;
+}
+button[data-key='favorite'] {
+  @apply text-2xl opacity-100;
+}
+
+button[data-key='favorite'].favorite_close ~ * {
+  @apply top-0  rounded-bl-xl opacity-0;
+}
