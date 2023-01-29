@@ -5,24 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link
-      rel="shortcut icon"
-      href="https://raw.githubusercontent.com/milley69/ondeck/master/img/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!-- <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    /> -->
-    <link
-      rel="stylesheet"
-      href="./node_modules/boxicons/css/boxicons.min.css"
-    />
-    <link href="./dist/tw-main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./dist/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="./dist/css/boxicons.min.css" />
+    <link rel="stylesheet" href="./dist/css/tw-main.css" />
   </head>
   <body
     class="h-screen w-screen overflow-y-hidden flex flex-col items-center justify-center mx-auto"
@@ -39,7 +24,6 @@
         <textarea
           id="what"
           class="block mt-1 h-[10%] text-2xl text-right w-full px-3 bg-transparent border-b-[1px] resize-none"
-          value="0"
           disabled
         ></textarea>
         <input
@@ -51,55 +35,60 @@
         />
 
         <div id="key2" class="grid grid-cols-4 gap-2 h-[75%] mt-[4%]">
-          <button class="rounded-tl-xl" disabled data-key="%">&percnt;</button>
-          <button class="" data-key="(">(</button>
-          <button class="" data-key=")">)</button>
-          <button class="rounded-tr-xl" data-key="pow">
+          <button type="button" class="rounded-tl-xl" data-key="%">%</button>
+          <button type="button" class="" data-key="(">(</button>
+          <button type="button" class="" data-key=")">)</button>
+          <button type="button" class="rounded-tr-xl" data-key="pow">
             x<span class="text-xs align-text-top">2</span>
           </button>
-          <button class="" data-key="del-all">CE</button
-          ><button class="" data-key="del">C</button
-          ><button class="" data-key="del-last">
+          <button type="button" class="" data-key="del-all">CE</button
+          ><button type="button" class="" data-key="del">C</button
+          ><button type="button" class="" data-key="del-last">
             <i class="bx bxs-tag-x bx-sm"></i></button
-          ><button class="" data-key="obelus">&#247;</button
-          ><button class="" data-key="number">7</button
-          ><button class="" data-key="number">8</button
-          ><button class="" data-key="number">9</button
-          ><button class="" data-key="multiply">&#215;</button
-          ><button class="" data-key="number">4</button
-          ><button class="" data-key="number">5</button
-          ><button class="" data-key="number">6</button
-          ><button class="" data-key="minus">&#8722;</button
-          ><button class="" data-key="number">1</button
-          ><button class="" data-key="number">2</button
-          ><button class="" data-key="number">3</button
-          ><button class="" data-key="plus">&#43;</button>
+          ><button type="button" class="" data-key="obelus">&#247;</button
+          ><button type="button" class="" data-key="number">7</button
+          ><button type="button" class="" data-key="number">8</button
+          ><button type="button" class="" data-key="number">9</button
+          ><button type="button" class="" data-key="multiply">&#215;</button
+          ><button type="button" class="" data-key="number">4</button
+          ><button type="button" class="" data-key="number">5</button
+          ><button type="button" class="" data-key="number">6</button
+          ><button type="button" class="" data-key="minus">&#8722;</button
+          ><button type="button" class="" data-key="number">1</button
+          ><button type="button" class="" data-key="number">2</button
+          ><button type="button" class="" data-key="number">3</button
+          ><button type="button" class="" data-key="plus">&#43;</button>
           <div class="favorite_settings relative">
             <button
+              type="button"
               class="w-full h-full relative rounded-bl-xl z-50 ring-0 outline-none favorite_close"
               data-key="favorite"
             >
               <i class="bx bx-heart"></i>
             </button>
             <button
+              type="button"
               class="absolute left-0 w-full h-[93%] z-10 -top-[105%] rounded-none"
               data-key="wine"
             >
               <i class="bx bx-wine bx-md"></i>
             </button>
             <button
+              type="button"
               class="absolute left-0 w-full h-[93%] z-10 -top-[209%] rounded-none"
               data-key="leaf"
             >
               <i class="bx bx-leaf bx-md"></i>
             </button>
             <button
+              type="button"
               class="absolute left-0 w-full h-[93%] z-10 -top-[313%] rounded-none"
               data-key="popsicle"
             >
               <i class="bx bx-popsicle bx-md"></i>
             </button>
             <button
+              type="button"
               class="absolute block left-0 w-full h-[93%] z-10 -top-[417%] rounded-none"
             >
               <a
@@ -110,9 +99,11 @@
               ></a>
             </button>
           </div>
-          <button class="" data-key="number">0</button
-          ><button class="" data-key=".">.</button
-          ><button class="rounded-br-xl" data-key="equal">&#61;</button>
+          <button type="button" class="" data-key="number">0</button
+          ><button type="button" class="" data-key=".">.</button
+          ><button type="button" class="rounded-br-xl" data-key="equal">
+            =
+          </button>
         </div>
       </div>
     </div>

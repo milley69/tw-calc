@@ -6,6 +6,7 @@ export const calc = () => {
   const who = document.getElementById('who')
 
   let equal = key.querySelector('[data-key="equal"]')
+  let percent = key.querySelector('[data-key="%"]')
   let delAll = key.querySelector('[data-key="del-all"]')
   let delLast = key.querySelector('[data-key="del-last"]')
   let del = key.querySelector('[data-key="del"]')
@@ -20,10 +21,14 @@ export const calc = () => {
   let popsicle = document.querySelector('.bx-popsicle')
 
   let fuck = []
-
+  what.value = '0'
   let enter = () => eval(fuck.join(''))
 
   const pow = (num) => `Math.pow(${num},2)`
+  const percentage = (num) => {
+    let res = enter()
+    return (res / 100) * +num
+  }
 
   const render = () => {
     what.value = fuck.join('')
@@ -62,7 +67,7 @@ export const calc = () => {
     what.value = '0'
     who.value = ''
   })
-  powbtn.addEventListener('click', () => {
+  percent.addEventListener('click', () => {
     let row = []
     for (let i = fuck.length - 1; i >= 0; i--) {
       if (
@@ -72,8 +77,33 @@ export const calc = () => {
         fuck.pop()
       } else break
     }
-    fuck.push(pow(row.join('')))
+    let symbolDel = fuck.pop()
+    let percentageReturn = percentage(row.join(''))
+    fuck.push(symbolDel)
+    fuck.push(percentageReturn)
     what.value = fuck.join('')
+  })
+  powbtn.addEventListener('click', () => {
+    let row = []
+    if (fuck.length > 0) {
+      for (let i = fuck.length - 1; i >= 0; i--) {
+        if (
+          !(
+            fuck[i] == '+' ||
+            fuck[i] == '-' ||
+            fuck[i] == '*' ||
+            fuck[i] == '/'
+          )
+        ) {
+          row.unshift(fuck[i])
+          fuck.pop()
+        } else break
+      }
+      if (row.length > 0) {
+        fuck.push(pow(row.join('')))
+        what.value = fuck.join('')
+      }
+    }
   })
   multiply.addEventListener('click', () => {
     delSymbol()
@@ -107,19 +137,25 @@ export const calc = () => {
     //   }
     // }
     if (click == '(') {
-      if (fuck.at(-1) !== '*') {
+      if (
+        fuck.at(-1) !== '*' &&
+        fuck.at(-1) !== '/' &&
+        fuck.at(-1) !== '+' &&
+        fuck.at(-1) !== '-' &&
+        fuck.length !== 0
+      ) {
         fuck.push('*')
       }
     }
     if (click == 'number' || click == '.' || click == '(' || click == ')') {
-      if (
-        (fuck.at(-1) !== '+' && who.value !== '') ||
-        (fuck.at(-1) !== '-' && who.value !== '') ||
-        (fuck.at(-1) !== '*' && who.value !== '') ||
-        (fuck.at(-1) !== '/' && who.value !== '')
-      ) {
-        fuck = []
-      }
+      // if (
+      //   (fuck.at(-1) !== '+' && who.value !== '') ||
+      //   (fuck.at(-1) !== '-' && who.value !== '') ||
+      //   (fuck.at(-1) !== '*' && who.value !== '') ||
+      //   (fuck.at(-1) !== '/' && who.value !== '')
+      // ) {
+      //   fuck = []
+      // }
 
       fuck.push(e.target.innerText)
       what.value = fuck.join('')

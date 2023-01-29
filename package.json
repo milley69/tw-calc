@@ -12,8 +12,5 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.2.4"
-  },
-  "dependencies": {
-    "boxicons": "^2.1.4"
   }
 }
