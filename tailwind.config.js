@@ -12,7 +12,7 @@ module.exports = {
           500: '#375441',
           600: '#232F29',
         },
-        lavender: {
+        popsicle: {
           100: '#dee2ff',
           200: '#feeafa',
           300: '#E5D3E0',

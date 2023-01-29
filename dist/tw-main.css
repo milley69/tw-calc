@@ -614,11 +614,6 @@ video {
   width: 100%;
 }
 
-.rotate-180 {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .resize-none {
   resize: none;
 }
@@ -789,26 +784,26 @@ body.leaf #key2 > button[data-key='number']:hover {
   background-color: rgb(58 90 64 / var(--tw-bg-opacity));
 }
 
-body.lavender {
+body.popsicle {
   --tw-bg-opacity: 1;
   background-color: rgb(222 226 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(71 77 88 / var(--tw-text-opacity));
 }
 
-body.lavender .card .card-calc {
+body.popsicle .card .card-calc {
   --tw-bg-opacity: 1;
   background-color: rgb(254 234 250 / var(--tw-bg-opacity));
 }
 
-body.lavender textarea,
-body.lavender input {
+body.popsicle textarea,
+body.popsicle input {
   --tw-border-opacity: 1;
   border-color: rgb(222 226 255 / var(--tw-border-opacity));
 }
 
-body.lavender #key2 > button,
-body.lavender #key2 > .favorite_settings button {
+body.popsicle #key2 > button,
+body.popsicle #key2 > .favorite_settings button {
   --tw-bg-opacity: 1;
   background-color: rgb(203 192 211 / var(--tw-bg-opacity));
   font-size: 1.125rem;
@@ -820,26 +815,26 @@ body.lavender #key2 > .favorite_settings button {
   transition-duration: 150ms;
 }
 
-body.lavender #key2 > button:hover,
-body.lavender #key2 > .favorite_settings button:hover {
+body.popsicle #key2 > button:hover,
+body.popsicle #key2 > .favorite_settings button:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(142 154 175 / var(--tw-bg-opacity));
 }
 
-body.lavender #key2 > button:disabled,
-body.lavender #key2 > .favorite_settings button:disabled {
+body.popsicle #key2 > button:disabled,
+body.popsicle #key2 > .favorite_settings button:disabled {
   --tw-bg-opacity: 1;
   background-color: rgb(71 77 88 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(222 226 255 / var(--tw-text-opacity));
 }
 
-body.lavender #key2 > button[data-key='number'] {
+body.popsicle #key2 > button[data-key='number'] {
   --tw-bg-opacity: 1;
   background-color: rgb(229 211 224 / var(--tw-bg-opacity));
 }
 
-body.lavender #key2 > button[data-key='number']:hover {
+body.popsicle #key2 > button[data-key='number']:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(142 154 175 / var(--tw-bg-opacity));
 }

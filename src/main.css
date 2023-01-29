@@ -26,22 +26,22 @@ body.leaf #key2 > button[data-key='number'] {
   @apply bg-leaf-300 hover:bg-leaf-400;
 }
 
-body.lavender {
-  @apply bg-lavender-100 text-lavender-600;
+body.popsicle {
+  @apply bg-popsicle-100 text-popsicle-600;
 }
-body.lavender .card .card-calc {
-  @apply bg-lavender-200;
+body.popsicle .card .card-calc {
+  @apply bg-popsicle-200;
 }
-body.lavender textarea,
-body.lavender input {
-  @apply border-lavender-100;
+body.popsicle textarea,
+body.popsicle input {
+  @apply border-popsicle-100;
 }
-body.lavender #key2 > button,
-body.lavender #key2 > .favorite_settings button {
-  @apply bg-lavender-400 hover:bg-lavender-500 disabled:bg-lavender-600 disabled:text-lavender-100 transition-all text-lg drop-shadow-2xl;
+body.popsicle #key2 > button,
+body.popsicle #key2 > .favorite_settings button {
+  @apply bg-popsicle-400 hover:bg-popsicle-500 disabled:bg-popsicle-600 disabled:text-popsicle-100 transition-all text-lg drop-shadow-2xl;
 }
-body.lavender #key2 > button[data-key='number'] {
-  @apply bg-lavender-300 hover:bg-lavender-500;
+body.popsicle #key2 > button[data-key='number'] {
+  @apply bg-popsicle-300 hover:bg-popsicle-500;
 }
 
 body.wine {
