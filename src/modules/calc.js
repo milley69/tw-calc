@@ -1,5 +1,3 @@
-import { changeTheme } from '../modules/theme.js'
-
 export const calc = () => {
   const key = document.getElementById('key2')
   const what = document.getElementById('what')
@@ -15,10 +13,6 @@ export const calc = () => {
   let minus = key.querySelector('[data-key="minus"]')
   let obelus = key.querySelector('[data-key="obelus"]')
   let plus = key.querySelector('[data-key="plus"]')
-
-  let wine = document.querySelector('.bx-wine')
-  let leaf = document.querySelector('.bx-leaf')
-  let popsicle = document.querySelector('.bx-popsicle')
 
   let fuck = []
   what.value = '0'
@@ -41,6 +35,16 @@ export const calc = () => {
       fuck[fuck.length - 1] == '-'
     ) {
       fuck.pop()
+    }
+  }
+  const symbolAdd = (symbol) => {
+    if (fuck.length < 24) {
+      delSymbol()
+      fuck.push(symbol)
+      what.value = fuck.join('')
+    } else {
+      equal.click()
+      symbolAdd(symbol)
     }
   }
   // const click = e.target.dataset.key
@@ -66,6 +70,9 @@ export const calc = () => {
     fuck = []
     what.value = '0'
     who.value = ''
+    setTimeout(() => {
+      console.clear()
+    }, 100)
   })
   percent.addEventListener('click', () => {
     let row = []
@@ -105,37 +112,13 @@ export const calc = () => {
       }
     }
   })
-  multiply.addEventListener('click', () => {
-    delSymbol()
-    fuck.push('*')
-    what.value = fuck.join('')
-  })
-  minus.addEventListener('click', () => {
-    delSymbol()
-    fuck.push('-')
-    what.value = fuck.join('')
-  })
-  obelus.addEventListener('click', () => {
-    delSymbol()
-    fuck.push('/')
-    what.value = fuck.join('')
-  })
-  plus.addEventListener('click', () => {
-    delSymbol()
-    fuck.push('+')
-    what.value = fuck.join('')
-  })
+  multiply.addEventListener('click', () => symbolAdd('*'))
+  minus.addEventListener('click', () => symbolAdd('-'))
+  obelus.addEventListener('click', () => symbolAdd('/'))
+  plus.addEventListener('click', () => symbolAdd('+'))
 
   key.addEventListener('click', (e) => {
     const click = e.target.dataset.key
-    const clickIcon = e.target.closest('button').dataset.key
-
-    // if (click == 'number' || click == '(' || click == ')') {
-    //   if (what.value !== '' && who.value !== '') {
-    //     fuck = []
-    //     // render()
-    //   }
-    // }
     if (click == '(') {
       if (
         fuck.at(-1) !== '*' &&
@@ -148,26 +131,8 @@ export const calc = () => {
       }
     }
     if (click == 'number' || click == '.' || click == '(' || click == ')') {
-      // if (
-      //   (fuck.at(-1) !== '+' && who.value !== '') ||
-      //   (fuck.at(-1) !== '-' && who.value !== '') ||
-      //   (fuck.at(-1) !== '*' && who.value !== '') ||
-      //   (fuck.at(-1) !== '/' && who.value !== '')
-      // ) {
-      //   fuck = []
-      // }
-
       fuck.push(e.target.innerText)
       what.value = fuck.join('')
-    }
-    if (clickIcon == 'leaf') {
-      changeTheme('leaf', 'popsicle', 'wine', leaf, popsicle, wine)
-    }
-    if (clickIcon == 'popsicle') {
-      changeTheme('popsicle', 'wine', 'leaf', popsicle, wine, leaf)
-    }
-    if (clickIcon == 'wine') {
-      changeTheme('wine', 'leaf', 'popsicle', wine, leaf, popsicle)
     }
     console.log(fuck)
   })
