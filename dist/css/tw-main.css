@@ -670,11 +670,6 @@ video {
   border-bottom-width: 1px;
 }
 
-.border-leaf-100 {
-  --tw-border-opacity: 1;
-  border-color: rgb(218 215 205 / var(--tw-border-opacity));
-}
-
 .bg-transparent {
   background-color: transparent;
 }
@@ -706,11 +701,6 @@ video {
   line-height: 1rem;
 }
 
-.text-leaf-100 {
-  --tw-text-opacity: 1;
-  color: rgb(218 215 205 / var(--tw-text-opacity));
-}
-
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -728,6 +718,10 @@ video {
 button.leaf {
   @apply bg-leaf-500 hover:bg-leaf-400;
 } */
+
+body {
+  touch-action: manipulation;
+}
 
 body.leaf {
   --tw-bg-opacity: 1;

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Calculator</title>
+
     <link rel="shortcut icon" href="./dist/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./dist/css/boxicons.min.css" />
     <link rel="stylesheet" href="./dist/css/tw-main.css" />
@@ -14,13 +16,6 @@
   >
     <div class="card w-[350px] h-[710px]">
       <div class="card-calc p-3 w-full h-full rounded-2xl">
-        <!-- <input
-          type="text"
-          id="what"
-          class="block mt-1 h-[10%] text-leaf-100 text-2xl text-right w-full px-3 bg-transparent border-b-[1px] border-leaf-100"
-          value="0"
-          disabled
-        /> -->
         <textarea
           id="what"
           class="block mt-1 h-[10%] text-2xl text-right w-full px-3 bg-transparent border-b-[1px] resize-none"
@@ -36,8 +31,8 @@
 
         <div id="key2" class="grid grid-cols-4 gap-2 h-[75%] mt-[4%]">
           <button type="button" class="rounded-tl-xl" data-key="%">%</button>
-          <button type="button" class="" data-key="(">(</button>
-          <button type="button" class="" data-key=")">)</button>
+          <button type="button" class="" data-key="brackets">( )</button>
+          <button type="button" class="" data-key="sqrt">&radic;</button>
           <button type="button" class="rounded-tr-xl" data-key="pow">
             x<span class="text-xs align-text-top">2</span>
           </button>
@@ -95,7 +90,9 @@
                 href="https://github.com/milley69"
                 rel="noopener"
                 target="_blank"
-                ><i class="bx bxl-github bx-md bx-spin-hover"></i
+                ><i
+                  class="bx bxl-github bx-md bx-spin-hover w-full h-full flex justify-center items-center"
+                ></i
               ></a>
             </button>
           </div>

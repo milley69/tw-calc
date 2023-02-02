@@ -1,4 +1,3 @@
-// export const Theme = () => {
 export const changeTheme = (
   mainTheme,
   otherTheme1,
@@ -41,4 +40,3 @@ export const themeCheker = () => {
     themeCheker()
   }
 }
-// }

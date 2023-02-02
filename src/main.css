@@ -8,6 +8,9 @@
 button.leaf {
   @apply bg-leaf-500 hover:bg-leaf-400;
 } */
+body {
+  @apply touch-manipulation;
+}
 body.leaf {
   @apply bg-leaf-100 text-leaf-100;
 }
