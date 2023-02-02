@@ -125,7 +125,7 @@ export const calc = () => {
     who.value = ''
     powValue = 0
     setTimeout(() => {
-      // console.clear()
+      console.clear()
     }, 100)
     boobsFunc()
   })
@@ -172,6 +172,29 @@ export const calc = () => {
       }
     }
   })
+  sqrtbtn.addEventListener('click', () => {
+    let row = []
+    if (fuck.length > 0) {
+      for (let i = fuck.length - 1; i >= 0; i--) {
+        if (
+          !(
+            fuck[i] == '+' ||
+            fuck[i] == '-' ||
+            fuck[i] == '*' ||
+            fuck[i] == '/'
+          )
+        ) {
+          row.unshift(fuck[i])
+          fuck.pop()
+        } else break
+      }
+      if (row.length > 0) {
+        fuck.push(sqrt(row.join('')))
+        what.value = fuck.join('')
+        powValue += 1
+      }
+    }
+  })
   powbtn.addEventListener('click', () => {
     let row = []
     if (fuck.length > 0) {
@@ -206,7 +229,5 @@ export const calc = () => {
       fuck.push(e.target.innerText)
       render()
     }
-    console.log(fuck)
-    console.log(what.value)
   })
 }
